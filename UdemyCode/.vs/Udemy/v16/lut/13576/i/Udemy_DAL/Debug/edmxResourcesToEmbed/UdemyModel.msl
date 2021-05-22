@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="UdemyModelStoreContainer" CdmEntityContainer="UdemyEntities">
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="UdemyModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Beoordeling">
+      <EntityTypeMapping TypeName="UdemyModel.Beoordeling">
+        <MappingFragment StoreEntitySet="Beoordeling">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Score" ColumnName="Score" />
+          <ScalarProperty Name="Cursus_Id" ColumnName="Cursus_Id" />
+          <ScalarProperty Name="Student_Id" ColumnName="Student_Id" />
+          <ScalarProperty Name="Beschrijving" ColumnName="Beschrijving" />
+          <ScalarProperty Name="Datum" ColumnName="Datum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bijzonderheid">
+      <EntityTypeMapping TypeName="UdemyModel.Bijzonderheid">
+        <MappingFragment StoreEntitySet="Bijzonderheid">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Naam" ColumnName="Naam" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Categorie">
+      <EntityTypeMapping TypeName="UdemyModel.Categorie">
+        <MappingFragment StoreEntitySet="Categorie">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Naam" ColumnName="Naam" />
+          <ScalarProperty Name="Cat_Id" ColumnName="Cat_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cursus">
+      <EntityTypeMapping TypeName="UdemyModel.Cursus">
+        <MappingFragment StoreEntitySet="Cursus">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Naam" ColumnName="Naam" />
+          <ScalarProperty Name="Datum" ColumnName="Datum" />
+          <ScalarProperty Name="Categorie_Id" ColumnName="Categorie_Id" />
+          <ScalarProperty Name="Niveau_Id" ColumnName="Niveau_Id" />
+          <ScalarProperty Name="Prijs" ColumnName="Prijs" />
+          <ScalarProperty Name="Taal_Id" ColumnName="Taal_Id" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Beschrijving" ColumnName="Beschrijving" />
+          <ScalarProperty Name="Lesgever_Id" ColumnName="Lesgever_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cursus_Bijzonderheid">
+      <EntityTypeMapping TypeName="UdemyModel.Cursus_Bijzonderheid">
+        <MappingFragment StoreEntitySet="Cursus_Bijzonderheid">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Cursus_Id" ColumnName="Cursus_Id" />
+          <ScalarProperty Name="Bijzonderheid_Id" ColumnName="Bijzonderheid_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Cursus_Student">
+      <EntityTypeMapping TypeName="UdemyModel.Cursus_Student">
+        <MappingFragment StoreEntitySet="Cursus_Student">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Aankoopdatum" ColumnName="Aankoopdatum" />
+          <ScalarProperty Name="Cursus_Id" ColumnName="Cursus_Id" />
+          <ScalarProperty Name="Student_Id" ColumnName="Student_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Lesgever">
+      <EntityTypeMapping TypeName="UdemyModel.Lesgever">
+        <MappingFragment StoreEntitySet="Lesgever">
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Naam" ColumnName="Naam" />
+          <ScalarProperty Name="Voornaam" ColumnName="Voornaam" />
+          <ScalarProperty Name="Paswoord" ColumnName="Paswoord" />
+          <ScalarProperty Name="Straat" ColumnName="Straat" />
+          <ScalarProperty Name="Huisnummer" ColumnName="Huisnummer" />
+          <ScalarProperty Name="Postcode" ColumnName="Postcode" />
+          <ScalarProperty Name="Stad" ColumnName="Stad" />
+          <ScalarProperty Name="Land" ColumnName="Land" />
+          <ScalarProperty Name="Beschrijving" ColumnName="Beschrijving" />
+          <ScalarProperty Name="Begindatum" ColumnName="Begindatum" />
+          <ScalarProperty Name="Einddatum" ColumnName="Einddatum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Niveau">
+      <EntityTypeMapping TypeName="UdemyModel.Niveau">
+        <MappingFragment StoreEntitySet="Niveau">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Naam" ColumnName="Naam" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ondertitel">
+      <EntityTypeMapping TypeName="UdemyModel.Ondertitel">
+        <MappingFragment StoreEntitySet="Ondertitel">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Taal_Id" ColumnName="Taal_Id" />
+          <ScalarProperty Name="Video_Id" ColumnName="Video_Id" />
+          <ScalarProperty Name="Filepath" ColumnName="Filepath" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Student">
+      <EntityTypeMapping TypeName="UdemyModel.Student">
+        <MappingFragment StoreEntitySet="Student">
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Naam" ColumnName="Naam" />
+          <ScalarProperty Name="Voornaam" ColumnName="Voornaam" />
+          <ScalarProperty Name="Paswoord" ColumnName="Paswoord" />
+          <ScalarProperty Name="Straat" ColumnName="Straat" />
+          <ScalarProperty Name="Huisnummer" ColumnName="Huisnummer" />
+          <ScalarProperty Name="Postcode" ColumnName="Postcode" />
+          <ScalarProperty Name="Stad" ColumnName="Stad" />
+          <ScalarProperty Name="Land" ColumnName="Land" />
+          <ScalarProperty Name="BeginDatum" ColumnName="BeginDatum" />
+          <ScalarProperty Name="EindDatum" ColumnName="EindDatum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Taal">
+      <EntityTypeMapping TypeName="UdemyModel.Taal">
+        <MappingFragment StoreEntitySet="Taal">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Naam" ColumnName="Naam" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Video">
+      <EntityTypeMapping TypeName="UdemyModel.Video">
+        <MappingFragment StoreEntitySet="Video">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Naam" ColumnName="Naam" />
+          <ScalarProperty Name="Filepath" ColumnName="Filepath" />
+          <ScalarProperty Name="Taal_Id" ColumnName="Taal_Id" />
+          <ScalarProperty Name="Cursus_Id" ColumnName="Cursus_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="UdemyModel.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="UdemyModel.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="UdemyModel.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="UdemyModel.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="UdemyModel.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="UdemyModel.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="UdemyModel.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="UdemyModel.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="UdemyModel.Store.sp_upgraddiagrams" />
+    <EntitySetMapping Name="Cursus">
+      <EntityTypeMapping TypeName="UdemyModel.Cursus">
+        <MappingFragment StoreEntitySet="Cursus">
+          <ScalarProperty Name="Lesgever_Id" ColumnName="Lesgever_Id" />
+          <ScalarProperty Name="Beschrijving" ColumnName="Beschrijving" />
+          <ScalarProperty Name="Code" ColumnName="Code" />
+          <ScalarProperty Name="Taal_Id" ColumnName="Taal_Id" />
+          <ScalarProperty Name="Prijs" ColumnName="Prijs" />
+          <ScalarProperty Name="Niveau_Id" ColumnName="Niveau_Id" />
+          <ScalarProperty Name="Categorie_Id" ColumnName="Categorie_Id" />
+          <ScalarProperty Name="Datum" ColumnName="Datum" />
+          <ScalarProperty Name="Naam" ColumnName="Naam" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

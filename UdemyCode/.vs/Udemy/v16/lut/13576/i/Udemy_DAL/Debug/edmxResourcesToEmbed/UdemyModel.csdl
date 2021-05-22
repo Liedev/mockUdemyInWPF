@@ -1,0 +1,465 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="UdemyModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Beoordeling">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Score" Type="Decimal" Precision="2" Scale="1" Nullable="false" />
+    <Property Name="Cursus_Id" Type="Int32" Nullable="false" />
+    <Property Name="Student_Id" Type="Int32" Nullable="false" />
+    <Property Name="Beschrijving" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Datum" Type="DateTime" Nullable="false" Precision="0" />
+    <NavigationProperty Name="Student" Relationship="Self.FK_Beoordeling_Student" FromRole="Beoordeling" ToRole="Student" />
+    <NavigationProperty Name="Cursus" Relationship="UdemyModel.FK_Beoordeling_Cursus" FromRole="Beoordeling" ToRole="Cursus" />
+  </EntityType>
+  <EntityType Name="Bijzonderheid">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Naam" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Cursus_Bijzonderheden" Relationship="Self.FK_Cursus_Bijzonderheid_Bijzonderheid" FromRole="Bijzonderheid" ToRole="Cursus_Bijzonderheid" />
+  </EntityType>
+  <EntityType Name="Categorie">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Naam" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Cat_Id" Type="Int32" />
+    <NavigationProperty Name="Categorieen1" Relationship="Self.FK_Categorie_Cat_Id" FromRole="Categorie" ToRole="Categorie1" />
+    <NavigationProperty Name="Categorie2" Relationship="Self.FK_Categorie_Cat_Id" FromRole="Categorie1" ToRole="Categorie" />
+    <NavigationProperty Name="Cursussen" Relationship="UdemyModel.FK_Cursus_Categorie" FromRole="Categorie" ToRole="Cursus" />
+  </EntityType>
+  <EntityType Name="Cursus_Bijzonderheid">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Cursus_Id" Type="Int32" Nullable="false" />
+    <Property Name="Bijzonderheid_Id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Bijzonderheid" Relationship="Self.FK_Cursus_Bijzonderheid_Bijzonderheid" FromRole="Cursus_Bijzonderheid" ToRole="Bijzonderheid" />
+    <NavigationProperty Name="Cursus" Relationship="UdemyModel.FK_Cursus_Bijzonderheid_Cursus" FromRole="Cursus_Bijzonderheid" ToRole="Cursus" />
+  </EntityType>
+  <EntityType Name="Cursus_Student">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Aankoopdatum" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Cursus_Id" Type="Int32" Nullable="false" />
+    <Property Name="Student_Id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Student" Relationship="Self.FK_Cursus_Student_Student" FromRole="Cursus_Student" ToRole="Student" />
+    <NavigationProperty Name="Cursus" Relationship="UdemyModel.FK_Cursus_Student_Cursus" FromRole="Cursus_Student" ToRole="Cursus" />
+  </EntityType>
+  <EntityType Name="Lesgever">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Naam" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Voornaam" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Paswoord" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Straat" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Huisnummer" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Postcode" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Stad" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Land" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Beschrijving" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Begindatum" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Einddatum" Type="DateTime" Precision="0" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Cursussen" Relationship="UdemyModel.FK_Cursus_Lesgever" FromRole="Lesgever" ToRole="Cursus" />
+  </EntityType>
+  <EntityType Name="Niveau">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Naam" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Cursussen" Relationship="UdemyModel.FK_Cursus_Niveau" FromRole="Niveau" ToRole="Cursus" />
+  </EntityType>
+  <EntityType Name="Ondertitel">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Taal_Id" Type="Int32" Nullable="false" />
+    <Property Name="Video_Id" Type="Int32" Nullable="false" />
+    <Property Name="Filepath" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Taal" Relationship="Self.FK_Ondertitel_Taal" FromRole="Ondertitel" ToRole="Taal" />
+    <NavigationProperty Name="Video" Relationship="Self.FK_Ondertitel_Video" FromRole="Ondertitel" ToRole="Video" />
+  </EntityType>
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Naam" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Voornaam" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Paswoord" Type="String" MaxLength="60" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Straat" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Huisnummer" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Postcode" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Stad" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Land" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BeginDatum" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="EindDatum" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Beoordelingen" Relationship="Self.FK_Beoordeling_Student" FromRole="Student" ToRole="Beoordeling" />
+    <NavigationProperty Name="Cursussen_Studenten" Relationship="Self.FK_Cursus_Student_Student" FromRole="Student" ToRole="Cursus_Student" />
+    <Property Name="Email" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Taal">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Naam" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Ondertitels" Relationship="Self.FK_Ondertitel_Taal" FromRole="Taal" ToRole="Ondertitel" />
+    <NavigationProperty Name="Videos" Relationship="Self.FK_Video_Taal" FromRole="Taal" ToRole="Video" />
+    <NavigationProperty Name="Cursussen" Relationship="UdemyModel.FK_Cursus_Taal" FromRole="Taal" ToRole="Cursus" />
+  </EntityType>
+  <EntityType Name="Video">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Naam" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Filepath" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Taal_Id" Type="Int32" Nullable="false" />
+    <Property Name="Cursus_Id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Ondertitels" Relationship="Self.FK_Ondertitel_Video" FromRole="Video" ToRole="Ondertitel" />
+    <NavigationProperty Name="Taal" Relationship="Self.FK_Video_Taal" FromRole="Video" ToRole="Taal" />
+    <NavigationProperty Name="Cursus" Relationship="UdemyModel.FK_Video_Cursus" FromRole="Video" ToRole="Cursus" />
+  </EntityType>
+  <Association Name="FK_Beoordeling_Student">
+    <End Role="Student" Type="Self.Student" Multiplicity="1" />
+    <End Role="Beoordeling" Type="Self.Beoordeling" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Beoordeling">
+        <PropertyRef Name="Student_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Cursus_Bijzonderheid_Bijzonderheid">
+    <End Role="Bijzonderheid" Type="Self.Bijzonderheid" Multiplicity="1" />
+    <End Role="Cursus_Bijzonderheid" Type="Self.Cursus_Bijzonderheid" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Bijzonderheid">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Cursus_Bijzonderheid">
+        <PropertyRef Name="Bijzonderheid_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Categorie_Cat_Id">
+    <End Role="Categorie" Type="Self.Categorie" Multiplicity="0..1" />
+    <End Role="Categorie1" Type="Self.Categorie" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categorie">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Categorie1">
+        <PropertyRef Name="Cat_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Cursus_Student_Student">
+    <End Role="Student" Type="Self.Student" Multiplicity="1" />
+    <End Role="Cursus_Student" Type="Self.Cursus_Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Cursus_Student">
+        <PropertyRef Name="Student_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ondertitel_Taal">
+    <End Role="Taal" Type="Self.Taal" Multiplicity="1" />
+    <End Role="Ondertitel" Type="Self.Ondertitel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Taal">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Ondertitel">
+        <PropertyRef Name="Taal_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ondertitel_Video">
+    <End Role="Video" Type="Self.Video" Multiplicity="1" />
+    <End Role="Ondertitel" Type="Self.Ondertitel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Video">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Ondertitel">
+        <PropertyRef Name="Video_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Video_Taal">
+    <End Role="Taal" Type="Self.Taal" Multiplicity="1" />
+    <End Role="Video" Type="Self.Video" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Taal">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Video">
+        <PropertyRef Name="Taal_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="UdemyEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="Beoordeling" EntityType="Self.Beoordeling" />
+    <EntitySet Name="Bijzonderheid" EntityType="Self.Bijzonderheid" />
+    <EntitySet Name="Categorie" EntityType="Self.Categorie" />
+    <EntitySet Name="Cursus_Bijzonderheid" EntityType="Self.Cursus_Bijzonderheid" />
+    <EntitySet Name="Cursus_Student" EntityType="Self.Cursus_Student" />
+    <EntitySet Name="Lesgever" EntityType="Self.Lesgever" />
+    <EntitySet Name="Niveau" EntityType="Self.Niveau" />
+    <EntitySet Name="Ondertitel" EntityType="Self.Ondertitel" />
+    <EntitySet Name="Student" EntityType="Self.Student" />
+    <EntitySet Name="Taal" EntityType="Self.Taal" />
+    <EntitySet Name="Video" EntityType="Self.Video" />
+    <AssociationSet Name="FK_Beoordeling_Student" Association="Self.FK_Beoordeling_Student">
+      <End Role="Student" EntitySet="Student" />
+      <End Role="Beoordeling" EntitySet="Beoordeling" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Cursus_Bijzonderheid_Bijzonderheid" Association="Self.FK_Cursus_Bijzonderheid_Bijzonderheid">
+      <End Role="Bijzonderheid" EntitySet="Bijzonderheid" />
+      <End Role="Cursus_Bijzonderheid" EntitySet="Cursus_Bijzonderheid" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Categorie_Cat_Id" Association="Self.FK_Categorie_Cat_Id">
+      <End Role="Categorie" EntitySet="Categorie" />
+      <End Role="Categorie1" EntitySet="Categorie" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Cursus_Student_Student" Association="Self.FK_Cursus_Student_Student">
+      <End Role="Student" EntitySet="Student" />
+      <End Role="Cursus_Student" EntitySet="Cursus_Student" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ondertitel_Taal" Association="Self.FK_Ondertitel_Taal">
+      <End Role="Taal" EntitySet="Taal" />
+      <End Role="Ondertitel" EntitySet="Ondertitel" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ondertitel_Video" Association="Self.FK_Ondertitel_Video">
+      <End Role="Video" EntitySet="Video" />
+      <End Role="Ondertitel" EntitySet="Ondertitel" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Video_Taal" Association="Self.FK_Video_Taal">
+      <End Role="Taal" EntitySet="Taal" />
+      <End Role="Video" EntitySet="Video" />
+    </AssociationSet>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(UdemyModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(UdemyModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+    <EntitySet Name="Cursus" EntityType="UdemyModel.Cursus" />
+    <AssociationSet Name="FK_Beoordeling_Cursus" Association="UdemyModel.FK_Beoordeling_Cursus">
+      <End Role="Cursus" EntitySet="Cursus" />
+      <End Role="Beoordeling" EntitySet="Beoordeling" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Cursus_Categorie" Association="UdemyModel.FK_Cursus_Categorie">
+      <End Role="Categorie" EntitySet="Categorie" />
+      <End Role="Cursus" EntitySet="Cursus" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Cursus_Bijzonderheid_Cursus" Association="UdemyModel.FK_Cursus_Bijzonderheid_Cursus">
+      <End Role="Cursus" EntitySet="Cursus" />
+      <End Role="Cursus_Bijzonderheid" EntitySet="Cursus_Bijzonderheid" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Cursus_Lesgever" Association="UdemyModel.FK_Cursus_Lesgever">
+      <End Role="Lesgever" EntitySet="Lesgever" />
+      <End Role="Cursus" EntitySet="Cursus" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Cursus_Niveau" Association="UdemyModel.FK_Cursus_Niveau">
+      <End Role="Niveau" EntitySet="Niveau" />
+      <End Role="Cursus" EntitySet="Cursus" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Cursus_Student_Cursus" Association="UdemyModel.FK_Cursus_Student_Cursus">
+      <End Role="Cursus" EntitySet="Cursus" />
+      <End Role="Cursus_Student" EntitySet="Cursus_Student" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Cursus_Taal" Association="UdemyModel.FK_Cursus_Taal">
+      <End Role="Taal" EntitySet="Taal" />
+      <End Role="Cursus" EntitySet="Cursus" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Video_Cursus" Association="UdemyModel.FK_Video_Cursus">
+      <End Role="Cursus" EntitySet="Cursus" />
+      <End Role="Video" EntitySet="Video" />
+    </AssociationSet>
+  </EntityContainer>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+  <EntityType Name="Cursus">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Naam" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Datum" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Categorie_Id" Type="Int32" Nullable="false" />
+    <Property Name="Niveau_Id" Type="Int32" Nullable="false" />
+    <Property Name="Prijs" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="Taal_Id" Type="Int32" Nullable="false" />
+    <Property Name="Code" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Beschrijving" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Lesgever_Id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Beoordelingen" Relationship="UdemyModel.FK_Beoordeling_Cursus" FromRole="Cursus" ToRole="Beoordeling" />
+    <NavigationProperty Name="Categorie" Relationship="UdemyModel.FK_Cursus_Categorie" FromRole="Cursus" ToRole="Categorie" />
+    <NavigationProperty Name="Cursus_Bijzonderheden" Relationship="UdemyModel.FK_Cursus_Bijzonderheid_Cursus" FromRole="Cursus" ToRole="Cursus_Bijzonderheid" />
+    <NavigationProperty Name="Lesgever" Relationship="UdemyModel.FK_Cursus_Lesgever" FromRole="Cursus" ToRole="Lesgever" />
+    <NavigationProperty Name="Niveau" Relationship="UdemyModel.FK_Cursus_Niveau" FromRole="Cursus" ToRole="Niveau" />
+    <NavigationProperty Name="Cursussen_Student" Relationship="UdemyModel.FK_Cursus_Student_Cursus" FromRole="Cursus" ToRole="Cursus_Student" />
+    <NavigationProperty Name="Taal" Relationship="UdemyModel.FK_Cursus_Taal" FromRole="Cursus" ToRole="Taal" />
+    <NavigationProperty Name="Videos" Relationship="UdemyModel.FK_Video_Cursus" FromRole="Cursus" ToRole="Video" />
+  </EntityType>
+  <Association Name="FK_Beoordeling_Cursus">
+    <End Type="UdemyModel.Cursus" Role="Cursus" Multiplicity="1" />
+    <End Type="UdemyModel.Beoordeling" Role="Beoordeling" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cursus">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Beoordeling">
+        <PropertyRef Name="Cursus_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Cursus_Categorie">
+    <End Type="UdemyModel.Categorie" Role="Categorie" Multiplicity="1" />
+    <End Type="UdemyModel.Cursus" Role="Cursus" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categorie">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Cursus">
+        <PropertyRef Name="Categorie_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Cursus_Bijzonderheid_Cursus">
+    <End Type="UdemyModel.Cursus" Role="Cursus" Multiplicity="1" />
+    <End Type="UdemyModel.Cursus_Bijzonderheid" Role="Cursus_Bijzonderheid" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cursus">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Cursus_Bijzonderheid">
+        <PropertyRef Name="Cursus_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Cursus_Lesgever">
+    <End Type="UdemyModel.Lesgever" Role="Lesgever" Multiplicity="1" />
+    <End Type="UdemyModel.Cursus" Role="Cursus" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Lesgever">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Cursus">
+        <PropertyRef Name="Lesgever_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Cursus_Niveau">
+    <End Type="UdemyModel.Niveau" Role="Niveau" Multiplicity="1" />
+    <End Type="UdemyModel.Cursus" Role="Cursus" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Niveau">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Cursus">
+        <PropertyRef Name="Niveau_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Cursus_Student_Cursus">
+    <End Type="UdemyModel.Cursus" Role="Cursus" Multiplicity="1" />
+    <End Type="UdemyModel.Cursus_Student" Role="Cursus_Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cursus">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Cursus_Student">
+        <PropertyRef Name="Cursus_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Cursus_Taal">
+    <End Type="UdemyModel.Taal" Role="Taal" Multiplicity="1" />
+    <End Type="UdemyModel.Cursus" Role="Cursus" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Taal">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Cursus">
+        <PropertyRef Name="Taal_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Video_Cursus">
+    <End Type="UdemyModel.Cursus" Role="Cursus" Multiplicity="1" />
+    <End Type="UdemyModel.Video" Role="Video" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Cursus">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Video">
+        <PropertyRef Name="Cursus_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

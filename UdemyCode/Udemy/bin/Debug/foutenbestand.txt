@@ -1,0 +1,36 @@
+07:53:05 
+DbUpdateConcurrencyException
+Store update, insert, or delete statement affected an unexpected number of rows (0). Entities may have been modified or deleted since entities were loaded. See http://go.microsoft.com/fwlink/?LinkId=472540 for information on understanding and handling optimistic concurrency exceptions.
+   bij System.Data.Entity.Internal.InternalContext.SaveChanges()
+   bij System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   bij System.Data.Entity.DbContext.SaveChanges()
+   bij Udemy_DAL.DatabaseOperations.AanpassensGegevensLesgever(Lesgever lesgever) in F:\UdemyCode\Datamanipulatie-Udemy\UdemyCode\Udemy_DAL\DatabaseOperations.cs:regel 58
+--------------------------------------------------------------------------------
+
+09:00:43 
+DbUpdateConcurrencyException
+Store update, insert, or delete statement affected an unexpected number of rows (0). Entities may have been modified or deleted since entities were loaded. See http://go.microsoft.com/fwlink/?LinkId=472540 for information on understanding and handling optimistic concurrency exceptions.
+   bij System.Data.Entity.Internal.InternalContext.SaveChanges()
+   bij System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   bij System.Data.Entity.DbContext.SaveChanges()
+   bij Udemy_DAL.DatabaseOperations.AanpassensGegevensLesgever(Lesgever lesgever) in F:\UdemyCode\Datamanipulatie-Udemy\UdemyCode\Udemy_DAL\DatabaseOperations.cs:regel 58
+--------------------------------------------------------------------------------
+
+09:05:10 
+DbUpdateConcurrencyException
+Store update, insert, or delete statement affected an unexpected number of rows (0). Entities may have been modified or deleted since entities were loaded. See http://go.microsoft.com/fwlink/?LinkId=472540 for information on understanding and handling optimistic concurrency exceptions.
+   bij System.Data.Entity.Internal.InternalContext.SaveChanges()
+   bij System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   bij System.Data.Entity.DbContext.SaveChanges()
+   bij Udemy_DAL.DatabaseOperations.AanpassensGegevensLesgever(Lesgever lesgever) in F:\UdemyCode\Datamanipulatie-Udemy\UdemyCode\Udemy_DAL\DatabaseOperations.cs:regel 58
+--------------------------------------------------------------------------------
+
+09:15:26 
+DbUpdateConcurrencyException
+Store update, insert, or delete statement affected an unexpected number of rows (0). Entities may have been modified or deleted since entities were loaded. See http://go.microsoft.com/fwlink/?LinkId=472540 for information on understanding and handling optimistic concurrency exceptions.
+   bij System.Data.Entity.Internal.InternalContext.SaveChanges()
+   bij System.Data.Entity.Internal.LazyInternalContext.SaveChanges()
+   bij System.Data.Entity.DbContext.SaveChanges()
+   bij Udemy_DAL.DatabaseOperations.AanpassensGegevensLesgever(Lesgever lesgever) in F:\UdemyCode\Datamanipulatie-Udemy\UdemyCode\Udemy_DAL\DatabaseOperations.cs:regel 58
+--------------------------------------------------------------------------------
+

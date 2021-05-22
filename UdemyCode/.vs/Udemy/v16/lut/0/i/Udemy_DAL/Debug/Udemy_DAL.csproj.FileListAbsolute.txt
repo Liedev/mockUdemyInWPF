@@ -1,0 +1,6 @@
+F:\UdemyCode\Datamanipulatie-Udemy\UdemyCode\.vs\Udemy\v16\lut\0\b\Udemy_DAL\bin\Debug\Udemy_DAL.dll.config
+F:\UdemyCode\Datamanipulatie-Udemy\UdemyCode\.vs\Udemy\v16\lut\0\b\Udemy_DAL\bin\Debug\Udemy_DAL.dll
+F:\UdemyCode\Datamanipulatie-Udemy\UdemyCode\.vs\Udemy\v16\lut\0\i\Udemy_DAL\Debug\Udemy_DAL.csproj.CoreCompileInputs.cache
+F:\UdemyCode\Datamanipulatie-Udemy\UdemyCode\.vs\Udemy\v16\lut\0\i\Udemy_DAL\Debug\Udemy_DAL.csproj.CopyComplete
+F:\UdemyCode\Datamanipulatie-Udemy\UdemyCode\.vs\Udemy\v16\lut\0\i\Udemy_DAL\Debug\Udemy_DAL.dll
+F:\UdemyCode\Datamanipulatie-Udemy\UdemyCode\.vs\Udemy\v16\lut\0\i\Udemy_DAL\Debug\Udemy_DAL.csprojAssemblyReference.cache

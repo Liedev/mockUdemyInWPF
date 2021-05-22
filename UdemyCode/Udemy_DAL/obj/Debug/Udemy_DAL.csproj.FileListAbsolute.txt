@@ -1,0 +1,30 @@
+F:\UdemyCode\Datamanipulatie-Udemy\UdemyCode\Udemy_DAL\bin\Debug\Udemy_DAL.dll.config
+F:\UdemyCode\Datamanipulatie-Udemy\UdemyCode\Udemy_DAL\bin\Debug\Udemy_DAL.dll
+F:\UdemyCode\Datamanipulatie-Udemy\UdemyCode\Udemy_DAL\bin\Debug\Udemy_DAL.pdb
+F:\UdemyCode\Datamanipulatie-Udemy\UdemyCode\Udemy_DAL\bin\Debug\EntityFramework.dll
+F:\UdemyCode\Datamanipulatie-Udemy\UdemyCode\Udemy_DAL\bin\Debug\EntityFramework.SqlServer.dll
+F:\UdemyCode\Datamanipulatie-Udemy\UdemyCode\Udemy_DAL\bin\Debug\Udemy_Models.dll
+F:\UdemyCode\Datamanipulatie-Udemy\UdemyCode\Udemy_DAL\bin\Debug\Udemy_Models.pdb
+F:\UdemyCode\Datamanipulatie-Udemy\UdemyCode\Udemy_DAL\bin\Debug\Udemy_Models.dll.config
+F:\UdemyCode\Datamanipulatie-Udemy\UdemyCode\Udemy_DAL\bin\Debug\EntityFramework.xml
+F:\UdemyCode\Datamanipulatie-Udemy\UdemyCode\Udemy_DAL\bin\Debug\EntityFramework.SqlServer.xml
+F:\UdemyCode\Datamanipulatie-Udemy\UdemyCode\Udemy_DAL\obj\Debug\Udemy_DAL.csprojAssemblyReference.cache
+F:\UdemyCode\Datamanipulatie-Udemy\UdemyCode\Udemy_DAL\obj\Debug\Udemy_DAL.csproj.CoreCompileInputs.cache
+F:\UdemyCode\Datamanipulatie-Udemy\UdemyCode\Udemy_DAL\obj\Debug\Udemy_DAL.csproj.CopyComplete
+F:\UdemyCode\Datamanipulatie-Udemy\UdemyCode\Udemy_DAL\obj\Debug\Udemy_DAL.dll
+F:\UdemyCode\Datamanipulatie-Udemy\UdemyCode\Udemy_DAL\obj\Debug\Udemy_DAL.pdb
+D:\Eerste jaar programmeren\UdemyCode\Udemy_DAL\bin\Debug\Udemy_DAL.dll.config
+D:\Eerste jaar programmeren\UdemyCode\Udemy_DAL\bin\Debug\Udemy_DAL.dll
+D:\Eerste jaar programmeren\UdemyCode\Udemy_DAL\bin\Debug\Udemy_DAL.pdb
+D:\Eerste jaar programmeren\UdemyCode\Udemy_DAL\bin\Debug\EntityFramework.dll
+D:\Eerste jaar programmeren\UdemyCode\Udemy_DAL\bin\Debug\EntityFramework.SqlServer.dll
+D:\Eerste jaar programmeren\UdemyCode\Udemy_DAL\bin\Debug\Udemy_Models.dll
+D:\Eerste jaar programmeren\UdemyCode\Udemy_DAL\bin\Debug\Udemy_Models.pdb
+D:\Eerste jaar programmeren\UdemyCode\Udemy_DAL\bin\Debug\Udemy_Models.dll.config
+D:\Eerste jaar programmeren\UdemyCode\Udemy_DAL\bin\Debug\EntityFramework.xml
+D:\Eerste jaar programmeren\UdemyCode\Udemy_DAL\bin\Debug\EntityFramework.SqlServer.xml
+D:\Eerste jaar programmeren\UdemyCode\Udemy_DAL\obj\Debug\Udemy_DAL.csprojAssemblyReference.cache
+D:\Eerste jaar programmeren\UdemyCode\Udemy_DAL\obj\Debug\Udemy_DAL.csproj.CoreCompileInputs.cache
+D:\Eerste jaar programmeren\UdemyCode\Udemy_DAL\obj\Debug\Udemy_DAL.csproj.CopyComplete
+D:\Eerste jaar programmeren\UdemyCode\Udemy_DAL\obj\Debug\Udemy_DAL.dll
+D:\Eerste jaar programmeren\UdemyCode\Udemy_DAL\obj\Debug\Udemy_DAL.pdb

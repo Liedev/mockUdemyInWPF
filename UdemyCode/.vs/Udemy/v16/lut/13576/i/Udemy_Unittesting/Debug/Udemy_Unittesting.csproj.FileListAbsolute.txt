@@ -1,0 +1,9 @@
+F:\UdemyCode\Datamanipulatie-Udemy\UdemyCode\.vs\Udemy\v16\lut\0\b\Udemy_Unittesting\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+F:\UdemyCode\Datamanipulatie-Udemy\UdemyCode\.vs\Udemy\v16\lut\0\b\Udemy_Unittesting\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+F:\UdemyCode\Datamanipulatie-Udemy\UdemyCode\.vs\Udemy\v16\lut\0\b\Udemy_Unittesting\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+F:\UdemyCode\Datamanipulatie-Udemy\UdemyCode\.vs\Udemy\v16\lut\0\b\Udemy_Unittesting\bin\Debug\Udemy_Unittesting.dll.config
+F:\UdemyCode\Datamanipulatie-Udemy\UdemyCode\.vs\Udemy\v16\lut\0\b\Udemy_Unittesting\bin\Debug\Udemy_Unittesting.dll
+F:\UdemyCode\Datamanipulatie-Udemy\UdemyCode\.vs\Udemy\v16\lut\0\i\Udemy_Unittesting\Debug\Udemy_Unittesting.csproj.CoreCompileInputs.cache
+F:\UdemyCode\Datamanipulatie-Udemy\UdemyCode\.vs\Udemy\v16\lut\0\i\Udemy_Unittesting\Debug\Udemy_Unittesting.csproj.CopyComplete
+F:\UdemyCode\Datamanipulatie-Udemy\UdemyCode\.vs\Udemy\v16\lut\0\i\Udemy_Unittesting\Debug\Udemy_Unittesting.dll
+F:\UdemyCode\Datamanipulatie-Udemy\UdemyCode\.vs\Udemy\v16\lut\0\i\Udemy_Unittesting\Debug\Udemy_Unittesting.csprojAssemblyReference.cache
