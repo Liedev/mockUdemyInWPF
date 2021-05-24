@@ -1,4 +1,4 @@
-# School Project Mock Udemy in WPF
+# Team School Project Mock Udemy in WPF
 ![](https://github.com/Liedev/mockUdemyInWPF/blob/main/udemyWpf.JPG)
 
 ## Language
